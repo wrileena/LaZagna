@@ -1,0 +1,16 @@
+
+experiment_name: "Bongu_test"
+# --- FPGA Grid Dimensions ---
+grid:
+  width_3d: 10 # 3D FPGA grid width  (columns)
+  height_3d: 10       # 3D FPGA grid height (rows)
+  width_2d: 10          # 2D-equivalent grid width  (used when type is "2d")
+  height_2d: 10     # 2D-equivalent grid height
+  channel_width: 10     # Routing channel width
+
+architectures:
+  - type: 3d_sb
+
+benchmarks:
+  directory: "{lazagna_root}/benchmarks/and2_or2"
+  is_verilog: false

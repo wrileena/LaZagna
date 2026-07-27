@@ -1,0 +1,22 @@
+# ============================================================
+# LaZagna Setup — Simple Test
+# ============================================================
+# A basic sanity-check using one architecture and small benchmarks.
+# All parameters below match defaults and are shown for reference.
+# ============================================================
+
+experiment_name: "lazagna_test"
+
+grid:
+  width_3d: 10
+  height_3d: 10
+  width_2d: 15
+  height_2d: 15
+  channel_width: 50
+
+architectures:
+  - type: 3d_sb
+
+benchmarks:
+  directory: "{lazagna_root}/benchmarks/and2_or2"
+  is_verilog: false

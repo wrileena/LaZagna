@@ -20,3 +20,14 @@ architectures:
 benchmarks:
   directory: "{lazagna_root}/benchmarks/and2_or2"
   is_verilog: false
+  
+interlayer_delay:
+  vertical_connectivity: 1             # Number of vertical connections per switch block
+  delay_ratio: [0.739]                  # Ratio of vertical-to-horizontal delay. List = sweep.
+  base_delay_switch: "L4_driver"        # Reference switch whose delay is used for scaling
+  update_arch_delay: true               # Whether to update the arch XML with scaled delays
+  switch_pairs:                         # Mapping: base switch name → inter-layer switch name
+    L4_driver: "L4_inter_layer_driver"
+    L16_driver: "L16_inter_layer_driver"
+    ipin_cblock: "ipin_inter_layer_cblock"
+

@@ -79,7 +79,9 @@ def main():
     run_params = get_run_params_from_yaml_v2(yaml_file, verbose=False)
 
     run_params = setup_benchmark_files(run_params)
+    print(run_params)
 
+    #commented to print run_params
     printing.verbose = verbose
 
     num_workers = args.num_workers
